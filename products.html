@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos - Adelaida</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="whoare.html">Home</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="map.html">Mapa</a></li>
+          <li><a href="products.html">Productos</a></li>
+        </ul>
+    </nav>
+
+    <div>
+      <h1>Nuestros Productos</h1>
+
+      <div>
+        <div>
+          <img src="images/product1.jpg" alt="Producto 1">
+          <div>
+            <h3>Producto Premium</h3>
+            <div>$99.99</div>
+            <button>Comprar</button>
+          </div>
+        </div>
+
+        <div>
+          <img src="images/product2.jpg" alt="Producto 2">
+          <div>
+            <h3>Producto Especial</h3>
+            <div>$79.99</div>
+            <button>Comprar</button>
+          </div>
+        </div>
+
+        <div>
+          <img src="images/product3.jpg" alt="Producto 3">
+          <div>
+            <h3>Producto Clásico</h3>
+            <div>$59.99</div>
+            <button>Comprar</button>
+          </div>
+        </div>
+
+        <div>
+          <img src="images/product4.jpg" alt="Producto 4">
+          <div>
+            <h3>Producto Moderno</h3>
+            <div>$89.99</div>
+            <button>Comprar</button>
+          </div>
+        </div>
+
+        <div>
+          <img src="images/product5.jpg" alt="Producto 5">
+          <div>
+            <h3>Producto Exclusivo</h3>
+            <div>$119.99</div>
+            <button>Comprar</button>
+          </div>
+        </div>
+
+        <div>
+          <img src="images/product6.jpg" alt="Producto 6">
+          <div>
+            <h3>Producto Deluxe</h3>
+            <div>$149.99</div>
+            <button>Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll("button").forEach(button => {
+          button.addEventListener("click", function() {
+              alert("Producto agregado al carrito!");
+          });
+      });
+    </script>
+</body>
+</html>

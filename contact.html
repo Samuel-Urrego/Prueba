@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="whoare.html">Home</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+      <li><a href="map.html">Mapa</a></li>
+      <li><a href="products.html">Productos</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Contáctanos</h1>
+    <p>Envíanos un mensaje por WhatsApp completando el siguiente formulario:</p>
+
+    <form>
+      <label for="name">Tu nombre:</label>
+      <input type="text" id="name" required />
+
+      <label for="message">Mensaje:</label>
+      <textarea id="message" required></textarea>
+
+      <button type="submit">Enviar por WhatsApp</button>
+    </form>
+  </main>
+
+  <script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const fullMessage = `Hola, soy ${name}. ${message}`;
+      const encodedMessage = encodeURIComponent(fullMessage);
+      const phone = "573162560862";
+      window.open(`https://wa.me/${phone}?text=${encodedMessage}`, "_blank");
+    });
+  </script>
+</body>
+</html>
